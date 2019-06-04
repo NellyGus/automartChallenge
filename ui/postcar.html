@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>AutoMart - post car sale AD</title>
+        <link rel="stylesheet" href="css/postcar.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+       <div class="container">
+          <form>
+            <h3>Post a car sale advertisement</h3>
+            <div class="form-group">
+              <select>
+                <option>city</option>
+              </select>
+              <label for="city" class="control-label">Your city</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" required="required"/>
+              <label for="phone" class="control-label">Your phone number</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+              <select>
+                <option>manufacturer</option>
+              </select>
+              <label for="make" class="control-label">Manufacturer</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+              <select>
+                <option>model</option>
+              </select>
+              <label for="model" class="control-label">Model</label><i class="bar"></i>
+            </div>
+             <div class="form-group">
+              <select>
+                <option>2017</option>
+              </select>
+              <label for="year" class="control-label">Year</label><i class="bar"></i>
+            </div>
+            <div class="form-radio">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="radio" checked="checked"/><i class="helper"></i>New car
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="radio"/><i class="helper"></i>Used car
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea  required="required"></textarea>
+              <label for="textarea" class="control-label">More description</label><i class="bar"></i>
+            </div>
+            <div class="file-upload">
+              <div class="file-select">
+                <div class="file-select-button" id="fileName">Choose car images</div>
+                <div class="file-select-name" id="noFile">No image chosen...</div> 
+                <input type="file" name="chooseFile" id="chooseFile" multiple>
+              </div>
+            </div>
+          </form>
+       <div class="button-container">
+       <button type="submit" class="button"><span>Post</span></button>
+       </div>
+     </div>
+    </body>
+</html>
