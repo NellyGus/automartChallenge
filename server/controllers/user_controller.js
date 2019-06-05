@@ -15,7 +15,7 @@ class UserController{
                 last_name: request.body.last_name,
                 password: hash,
                 address: request.body.address,
-                is_admin: request.body.is_admin
+                is_admin: false
             }
             user_model.push(newUser);
 
@@ -52,7 +52,7 @@ class UserController{
     
         // Compare password
         bcrypt.compare(password, user.password, (err, result) => {
-            if(result=== false){
+            if(!result){
                 response.status(400).send({
                     status: 400,
                     error: 'Password is incorrect',
