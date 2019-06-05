@@ -4,14 +4,14 @@ const valid_status = (request, response, next) => {
     status = status.trim().replace(/\s+/g, '');
 
   if (!status) {
-    return res.status(400).json({
+    return response.status(400).json({
       status: 400,
       error: 'Status is required'
     });
   }
 
   if (status.split('').some(x => Number.isInteger(parseInt(x, 10)))) {
-    return res.status(400).json({
+    return response.status(400).json({
       status: 400,
       error: 'Status cannot contain number'
     });
