@@ -44,5 +44,7 @@ const valid_car = (request, response, next) => {
             error: 'Enter a valid year, please'
         });
     }
+
+    return next();
 }
 export default valid_car;
