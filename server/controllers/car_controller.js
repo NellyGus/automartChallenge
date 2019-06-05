@@ -2,18 +2,10 @@ import car_model from '../model/car_model';
 
 class CarController {
     postCar(request, response){
-        if(!request.body.owner || !request.body.state ||
-            !request.body.status || !request.body.price || !request.body.manufacturer
-            || !request.body.model || !request.body.year){
-                response.status(400).send({
-                    status: 400,
-                    message: 'Each field is required, retry please'
-                });
-            }else{
                 const car= {
                     id: car_model.length + 1,
                     owner: request.body.owner,
-                    created_on: request.body.created_on,
+                    created_on: new Date(),
                     state: request.body.state,
                     status: request.body.status,
                     price: request.body.price,
@@ -28,9 +20,7 @@ class CarController {
                     status: 201,
                     message: 'car added successfully',
                     car
-                });
-            }
-            
+                });           
     } 
     getAllCars(request, response) {
         return response.status(200).send({
