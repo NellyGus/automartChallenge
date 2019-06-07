@@ -6,7 +6,7 @@ import validAccount from '../middlewares/valid_account';
 
 const user_route= express.Router();
 
-user_route.post('/api/v1/auth/signup', validEmail, validPassword, validAccount, userController.createAccount)
+user_route.post('/api/v1/auth/signup', validAccount, validEmail, validPassword, userController.createAccount)
 user_route.post('/api/v1/auth/signin', validEmail, validPassword, userController.login)
 
 export default user_route;
