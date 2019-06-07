@@ -2,7 +2,9 @@ import chai from 'chai';
 import { expect, assert } from 'chai';
 import chaiHttp from 'chai-http';
 import { describe, it } from 'mocha';
-import server from '../server';
+import app from '../server';
+
+chai.use(chaiHttp);
 
 describe('Test post car ad endpoint', () => {
     let carAd;
