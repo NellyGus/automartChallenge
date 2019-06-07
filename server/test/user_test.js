@@ -1,4 +1,5 @@
-import chai, { expect, assert } from 'chai';
+import chai from 'chai';
+import { expect, assert } from 'chai';
 import chaiHttp from 'chai-http';
 import { describe, it } from 'mocha';
 import server from '../server';
@@ -264,7 +265,7 @@ describe('test signup endpoint', () => {
             last_name: 'augustin',
             password: 'nelimaaugustin1234',
             address: '208, BKK, Bè-Klikame',
-            email: 'baugustino12@gil.com'
+            email: 'baugustino12@gmail.com'
           })
           .end((err, res) => {
             expect(res.body).to.be.an('object');
