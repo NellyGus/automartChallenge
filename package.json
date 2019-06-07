@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint",
-    "test": "mocha lib/**/**.spec.js",
+    "test": "mocha lib/**/**.spec.js server/test/user_test.js",
     "start": "node_modules/.bin/nodemon server/server.js --exec babel-node --"
   },
   "repository": {
