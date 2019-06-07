@@ -11,7 +11,7 @@ const valid_account= (request, response, next)=> {
             error: 'firstname or lastname is required'
         });
     }
-    if((first_name+last_name).split().some(str => Number.isInteger(parseInt(str, 10)))){
+    if((first_name+last_name).split('').some(str => Number.isInteger(parseInt(str, 10)))){
         return response.status(400).send({
             status: 400,
             error: 'firstname or lastname cannot contain number'
@@ -23,10 +23,10 @@ const valid_account= (request, response, next)=> {
             error: 'address is required'
         });
     }
-    if(first_name.length <2 || last_name.length <2 ){
+    if(first_name.length <3 || last_name.length <3 ){
         return response.status(400).send({
             status: 400,
-            error: 'firstname or lastname cannot be less than 2 characters'
+            error: 'firstname or lastname cannot be less than 3 characters'
         });
     }
   return next();
