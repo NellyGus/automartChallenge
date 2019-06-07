@@ -44,5 +44,13 @@ const valid_car = (request, response, next) => {
             error: 'Enter a valid year, please'
         });
     }
+    if(!year){
+        return response.status(400).send({
+            status: 400,
+            error: 'Enter a valid year, please'
+        });
+    }
+
+    return next();
 }
 export default valid_car;
