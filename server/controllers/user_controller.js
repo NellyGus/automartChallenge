@@ -65,7 +65,7 @@ class UserController{
                       id: user.id,
                       firstname: user.first_name,
                       lastname: user.last_name,
-                      email: user.email,
+                      email: user.email                      
                     },
                   }); 
             }
