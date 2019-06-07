@@ -7,17 +7,17 @@ import user_route from './routes/user_route';
 import {PORT} from './config';
 
 
-const server = express();
+const app = express();
 
-server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({ extended: true }));
-server.use(car_router);
-server.use(user_route);
-server.use(flag_router);
-server.use(order_router);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(car_router);
+app.use(user_route);
+app.use(flag_router);
+app.use(order_router);
 
-server.listen(PORT, ()=>{
+app.listen(PORT, ()=>{
     console.debug('server running on port '+PORT);
 });
 
-export default server;
+export default app;
