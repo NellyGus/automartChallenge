@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha lib/**/**.spec.js --require babel-register server/test/* --no-deprecation --exit",
     "start": "node_modules/.bin/nodemon server.js --exec babel-node --"
   },
   "repository": {
