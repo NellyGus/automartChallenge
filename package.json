@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/.bin/nodemon server.js --exec babel-node --"
+    "test": "mocha lib/**/**.spec.js",
+    "start": "node_modules/.bin/nodemon server/server.js --exec babel-node --"
   },
   "repository": {
     "type": "git",
