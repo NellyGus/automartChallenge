@@ -2,14 +2,14 @@ import chai from 'chai';
 import { expect, assert } from 'chai';
 import chaiHttp from 'chai-http';
 import { describe, it } from 'mocha';
-import server from '../server';
+import app from '../server';
 
 chai.use(chaiHttp);
 
 describe('test signup endpoint', () => {
     it('should create a user', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -51,7 +51,7 @@ describe('test signup endpoint', () => {
 
       it('Should return an error message if firstname is empty', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -81,7 +81,7 @@ describe('test signup endpoint', () => {
 
       it('Should return an error message if firstname contain a number', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -111,7 +111,7 @@ describe('test signup endpoint', () => {
     
       it('Should return an error message if firstname is less than 3 characters', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -141,7 +141,7 @@ describe('test signup endpoint', () => {
     
       it('Should return an error message if lastname is empty', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -171,7 +171,7 @@ describe('test signup endpoint', () => {
     
       it('Should return an error message if lastname is less than 3 characters', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -201,7 +201,7 @@ describe('test signup endpoint', () => {
     
       it('Should return an error message if password is empty', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -231,7 +231,7 @@ describe('test signup endpoint', () => {
     
       it('Should return an error message if password is less than 6 characters', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -261,7 +261,7 @@ describe('test signup endpoint', () => {
     
       it('Should return an error message if email is not valid', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
@@ -290,7 +290,7 @@ describe('test signup endpoint', () => {
       });
       it('Should return an error message if address is empty', (done) => {
         chai
-          .request(server)
+          .request(app)
           .post('/api/v1/auth/signup')
           .set({
             'Content-type': 'application/json',
