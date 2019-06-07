@@ -23,6 +23,12 @@ const valid_account= (request, response, next)=> {
             error: 'address is required'
         });
     }
+    if(first_name.length <2 || last_name.length <2 ){
+        return response.status(400).send({
+            status: 400,
+            error: 'firstname or lastname cannot be less than 2 characters'
+        });
+    }
   return next();
 }
 export default valid_account;
