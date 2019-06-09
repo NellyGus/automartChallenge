@@ -4,7 +4,7 @@ class CarController {
     postCar(request, response){
                 const car= {
                     id: car_model.length + 1,
-                    owner: request.body.owner,
+                    owner: 2,
                     created_on: new Date(),
                     state: request.body.state.trim().replace(/\s+/g, ''),
                     status: request.body.status.trim().replace(/\s+/g, ''),
@@ -134,7 +134,7 @@ class CarController {
             car.status= request.body.status;
             return response.status(200).send({
                 status: 200,
-                car
+                data: car
             });
         }else{
             return response.status(404).send({
