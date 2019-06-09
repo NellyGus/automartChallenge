@@ -26,7 +26,7 @@ describe('test signup endpoint', () => {
             expect(res.body).to.be.an('object');
             expect(res.body.status).to.equal(201);
             expect(res.body.newUser).to.be.an('object');
-            expect(res.body.newUser.token).to.be.a('string');
+            expect(res.body.token).to.be.a('string');
             expect(res.body.newUser.id).to.be.an('number');
             expect(res.body.newUser.first_name).to.be.a('string');
             expect(res.body.newUser.last_name).to.be.a('string');
@@ -37,7 +37,7 @@ describe('test signup endpoint', () => {
             assert.strictEqual(res.body.status, 201, 'Status is not 201');
             assert.isObject(res.body, 'Response is not an object');
             assert.isObject(res.body.newUser, 'Data is not an object');
-            assert.isString(res.body.newUser.token, 'Token is not a string');
+            assert.isString(res.body.token, 'Token is not a string');
             assert.isNumber(res.body.newUser.id, 'ID is not a number');
             assert.isString(res.body.newUser.first_name, 'Firstname is not a string');
             assert.isString(res.body.newUser.last_name, 'Lastname is not a string');
