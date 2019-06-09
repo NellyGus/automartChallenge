@@ -19,7 +19,7 @@ class UserController{
             }
             user_model.push(newUser);
 
-            const token = jwt.sign({ newUser }, JWT_SECRET , { expiresIn: 60*60 });
+            const token = jwt.sign({ newUser }, JWT_SECRET , { expiresIn: 60*1440 });
 
             return response.status(201).send({
                 status: 201,
