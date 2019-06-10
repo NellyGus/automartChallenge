@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "node_modules/.bin/eslint",
     "test": "mocha lib/**/**.spec.js --require babel-register server/test/* --no-deprecation --exit",
-    "start": "node_modules/.bin/nodemon server.js --exec babel-node --"
+    "start": "node_modules/.bin/nodemon server/server.js --exec babel-node --"
   },
   "repository": {
     "type": "git",
