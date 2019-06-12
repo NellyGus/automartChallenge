@@ -23,6 +23,9 @@
     background-color: #fff;
     /*border-collapse: collapse;*/
 }
+.filter .filterContent{
+  padding: 25px;
+}
 .products{
   width: 73%;
   height: 100%;
