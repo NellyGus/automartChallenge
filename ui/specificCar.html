@@ -27,7 +27,7 @@
                     cupiditate asperiores, perspiciatis quidem facere quis.
                   </p>
                   <h3>$2500</h3>
-                  <button class="contact">Contact seller</button>
+                  <button class="contact" id="contactBtn">Contact seller</button>
                   <button class="purchase" id="purchaseBtn">Purchase</button>
                   <button class="report" id="reportBtn">Report</button>
                   
@@ -36,13 +36,42 @@
            <div class="bg-modal">
                <div class="modal-content">
                   <div class="close">x</div>
-                  <img src="https://img.icons8.com/bubbles/2x/administrator-male.png" alt="seller-img">
                   <form action="">
-                     <input type="text" placeholder="Your email">
-                     <input type="text" placeholder="Reason">
-                     <textarea type="text" placeholder="Description"></textarea>
+                     <input type="text" placeholder="Email address or username" required="required">
+                     <input type="text" placeholder="Your phone number" required="required">
+                     <input type="text" placeholder="Reason" required="required">
+                     <textarea placeholder="Comments" required="required"></textarea>
                      <button class="submit">Submit</button>
                   </form>
+               </div>
+            </div>
+            <div class="po-modal">
+               <div class="modal-content">
+                  <div class="close2">x</div>
+                  <form action="" >
+                        <input type="text" placeholder="Email address or username" required="required">
+                        <input type="text" placeholder="Your phone number" required="required">
+                        <input type="number" placeholder="How much do you want to pay?" required="required">
+                        <button class="submit">Submit</button>
+                  </form>
+               </div>
+            </div>
+            <div class="contact-modal">
+               <div class="modal-content">
+               <div class="close3">x</div>
+               <div>
+                     <img src="https://img.icons8.com/bubbles/2x/administrator-male.png" alt="seller-img">
+                     <h2>Location</h2>
+                     <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  
+                        corporis cupiditate, natus commodi illum quae blanditiis error  
+                        doloremque voluptatem reiciendis ipsam laboriosam rem veniam no.
+                     </span>
+                     <h2>Phone number (s)</h2>
+                     <span>98767654</span><br> <span>98097654</span>
+                     <div>
+                        <button class="call">Call</button>
+                     </div> 
+               </div>
                </div>
             </div>
         </div> 
