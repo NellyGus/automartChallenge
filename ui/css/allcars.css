@@ -122,16 +122,21 @@
         .buttons {
           padding-top: .4em;
       }
-          .button {
+          .button, .yes, .no {
             text-decoration: none;
-            color: #5e5e5e;
             font-weight: bold;
             padding: .3em .65em;
             border-radius: 2.3px;
             transition: all .1s ease-in-out;
+            cursor: pointer;
           }
-          .add, .buy, .delete {
-            border: 1px #5e5e5e solid;
+          .buy, .delete, .yes {
+            color: red;
+            border: 1px red solid;
+        }
+        .add, .no{
+          color: #3F51B5;
+          border: 1px #3F51B5 solid;
         }
             &:hover {
               border-color: lighten(#588BAE, 5%);
@@ -146,6 +151,30 @@
             background: rgba(#898989, .04);
           }
         
+          .delete-modal{
+            width: 200px;
+            height:100px;
+            background-color: #fff;
+            opacity: 0.97;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            border-radius: 4px;
+            text-align: center;
+            padding: 10px;
+          }
+          .close
+          {
+            position: absolute;
+            top: 0;
+            right: 14px;
+            font-size: 42px;
+            transform: rotate(45deg);
+            cursor: pointer;
+          }
         /*Range slider*/
         section .range-slider {
   position: relative;
@@ -228,6 +257,7 @@ section .range-slider input[type=range]:last-of-type::-moz-range-track {
 section .range-slider input[type=range]::-moz-focus-outer {
   border: 0;
 }
+
 
 
 
