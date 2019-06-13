@@ -5,8 +5,13 @@
   "main": "server.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint",
+    "fix": "node_modules/.bin/eslint ./src --fix",
     "test": "mocha lib/**/**.spec.js --require babel-register server/test/* --no-deprecation --exit",
-    "start": "node_modules/.bin/nodemon server/server.js --exec babel-node --"
+    "dev": "node_modules/.bin/nodemon server/server.js --exec babel-node --",
+    "prestart": "babel ./server -d ./build --source-maps",
+    "start": "node ./build/server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build"
+
   },
   "repository": {
     "type": "git",
@@ -41,4 +46,5 @@
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1"
   }
+  
 }
