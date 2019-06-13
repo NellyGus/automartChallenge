@@ -35,7 +35,7 @@ h3 {
 
 .container {
   position: relative;
-  max-width: 40rem;
+  max-width: 60rem;
   margin: 5rem auto;
   background: #fff;
   width: 100%;
@@ -375,3 +375,4 @@ fieldset {
 .button:focus {
   outline: none;
 }
+
