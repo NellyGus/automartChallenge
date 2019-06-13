@@ -182,7 +182,6 @@ input, textarea{
    transform: rotate(45deg);
    cursor: pointer;
 }
-
 @media (max-width: 1080px){
    .container{
       height: auto;
