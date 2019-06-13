@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../server/model/order_model.js"],"names":["orders"],"mappings":";;;;;;AACA,IAAMA,SAAS,EAAf;;kBAEeA,M","file":"order_model.js","sourcesContent":["\r\nconst orders = []\r\n\r\nexport default orders;"]}
