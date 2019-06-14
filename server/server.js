@@ -25,6 +25,11 @@ app.use(user_route);
 app.use(flag_router);
 app.use(order_router);
 
+app.all('*', (req, res) => res.status(400).json({
+    status: 400,
+    error: 'Bad request',
+  }));
+
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => log.info(`Listening at ${PORT}`));
