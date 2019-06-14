@@ -9,7 +9,7 @@
     "test": "mocha lib/**/**.spec.js --require babel-register server/test/* --no-deprecation --exit",
     "dev": "node_modules/.bin/nodemon server/server.js --exec babel-node --",
     "prestart": "babel ./server -d ./build --source-maps",
-    "start": "node ./build/server",
+    "start": "node_modules/.bin/nodemon ./build/server",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build"
   },
   "repository": {
