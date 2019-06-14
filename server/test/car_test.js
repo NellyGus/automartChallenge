@@ -118,7 +118,7 @@ let carAd;
           .post('/api/v1/car')
           .set({
             'Content-Type': 'application/json',
-            Authorization: 'Bearer eyJhbGciOivIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZXdVc2VyIjp7ImlkIjoyLCJlbWFpbCI6Im5lbGltYUBnbWFpbC5jb20iLCJmaXJzdF9uYW1lIjoibmV2aWxsZSIsImxhc3RfbmFtZSI6IkF1Z3VzdGluIiwicGFzc3dvcmQiOiIkMmIkMDQkSzAvYWtHOGJOUnZ3cFJ3TU52cmJhLlpMM3RkZUdSVURDUTQ5dHpaT0tpdmUyQ21qWkcybG0iLCJhZGRyZXNzIjoiMjA4IFJ1ZSBCS0ssIELDqC1LbGlrYW1lIiwiaXNfYWRtaW4iOmZhbHNlfSwiaWF0IjoxNTYwMDk3NDMyLCJleHAiOjE1NjAxODM4MzJ9.u8IywIdkC6WWpOChA97vO94ix2prnkj3-VdpkB57CgI',
+            Authorization: 'Bearer eyJhbGciOivIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZXb20iLCJmaXJzdF9uYW1lIjoibmV2aWxsZSIsImxhc3RfbmFtZSI6IkF1Z3VzdGluIiwicGFzc3dvcmQiOiIkMmIkMDQkSzAvYWtHOGJOUnZ3cFJ3TU52cmJhLlpMM3RkZUdSVURDUTQ5dHpaT0tpdmUyQ21qWkcybG0iLCJhZGRyZXNzIjoiMjA4IFJ1ZSBCS0ssIELDqC1LbGlrYW1lIiwiaXNfYWRtaW4iOmZhbHNlfSwiaWF0IjoxNTYwMDk3NDMyLCJleHAiOjE1NjAxODM4MzJ9.u8IywIdkC6WWpOChA97vO94ix2prnkj3-VdpkB57CgI',
           })
           .send({
             state: 'use' ,
