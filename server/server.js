@@ -8,6 +8,7 @@ import car_router from './routes/car_route';
 import flag_router from './routes/flag_route';
 import order_router from './routes/order_route';
 import user_route from './routes/user_route';
+import index_route from './routes';
 // import {PORT} from './config';
 
 
@@ -20,6 +21,7 @@ app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(index_route)
 app.use(car_router);
 app.use(user_route);
 app.use(flag_router);
