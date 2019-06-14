@@ -1,1 +1,1 @@
-{"version":3,"sources":["../server/config.js"],"names":["PORT","JWT_SECRET"],"mappings":";;;;;AAAO,IAAMA,sBAAO,IAAb;AACA,IAAMC,kCAAa,QAAnB","file":"config.js","sourcesContent":["export const PORT = 8080;\r\nexport const JWT_SECRET = 'secret';"]}
+{"version":3,"sources":["../server/config.js"],"names":["JWT_SECRET"],"mappings":";;;;;AAAA;AACO,IAAMA,kCAAa,QAAnB","file":"config.js","sourcesContent":["// export const PORT = 8080;\r\nexport const JWT_SECRET = 'secret';"]}
