@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _express = require('express');
@@ -63,10 +63,17 @@ app.use(_user_route2.default);
 app.use(_flag_route2.default);
 app.use(_order_route2.default);
 
+app.all('*', function (req, res) {
+    return res.status(400).json({
+        status: 400,
+        error: 'Bad request'
+    });
+});
+
 var PORT = process.env.PORT || 8080;
 
 app.listen(PORT, function () {
-  return _fancyLog2.default.info('Listening at ' + PORT);
+    return _fancyLog2.default.info('Listening at ' + PORT);
 });
 
 exports.default = app;
